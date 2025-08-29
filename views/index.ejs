@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+    <% if (locals.noun && locals.adj) { %>
+      <h1>
+        Your band name is <%=`${noun} ${adj}`%>
+      </h1>
+    <% } else { %>
+      <h1>
+        Press the button to get your band name  
+      </h1>    
+    <% } %>
+
+
+<form action="/submit" method="POST">
+  <input type="submit" value="Generate Name">
+</form>
+
+<%- include('partials/footer.ejs') %>
